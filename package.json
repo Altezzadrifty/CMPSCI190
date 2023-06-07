@@ -4,7 +4,7 @@
     "description": "",
     "source": "index.html",
     "scripts": {
-        "build": "npx parcel build index.html --no-cache",
+        "build": "npx parcel build index.html",
         "start": "npx parcel index.html"
       }
 }
