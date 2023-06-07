@@ -1,7 +1,10 @@
 {
+    "name": "awesome-site",
+    "version": "1.0.0",
+    "description": "",
     "source": "index.html",
     "scripts": {
-        "build": "npx parcel build index.html",
+        "build": "npx parcel build index.html --no-cache",
         "start": "npx parcel index.html"
       }
 }
