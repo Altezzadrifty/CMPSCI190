@@ -3,3 +3,10 @@ function confirmlink455(linkname) {
          location = linkname;
  }
  
+var thename = " Alexander Turnbough ";
+var my_message = " cs190 Javascript Lab 2 ";
+var id2 = 931;
+
+function displayinfo991 (){
+    alert ( thename + my_message + id2 );
+}
