@@ -31,3 +31,27 @@ function displayspecial945() {
    }
 
 }
+
+var custtype = "direct";
+
+function changetype524() {
+    var newtype;
+    if (custtype == "direct") {
+      newtype = "advertising";
+    } else if (custtype == "advertising") {
+      newtype = "subscription";
+    } else if (custtype == "subscription") {
+      newtype = "direct";
+    }
+    custtype = newtype;
+    alert("Customer type has changed to: " + custtype);
+  }
+    function displaytype457() {
+     if (custtype == "direct") {
+          alert("Buy Now! From this web page! My children need new shoes!");
+        } else if (custtype == "advertising") {
+          alert("Support our advertisers! Click on an ad, so I can make money!");
+        } else if (custtype == "subscription") {
+          alert("Renew your subscription today! My children need medicine!");
+        }
+      }
