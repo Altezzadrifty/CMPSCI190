@@ -55,3 +55,36 @@ function changetype524() {
           alert("Renew your subscription today! My children need medicine!");
         }
       }
+
+function getName948() {
+    var name = prompt("please enter your name");
+    var message = " Your name is: " + name + " ";
+
+    if (name.length < 5) {
+    message += "You have a short name";
+}
+    else if (name.length < 10) {
+    message += "You have a medium name";
+}
+    else {
+    message += "You have a long name"
+    }
+    document.getElementById("name948").innerHTML = message;
+}
+
+function getAge877() {
+    var age = prompt("Please enter your age");
+    var message = " Your age is: " + age + " ";
+
+    if (age < 18) {
+    message += "You are a kid";
+ }
+    else if (age < 50) {
+    message += "You are an adult";
+}
+    else {
+     message += "You are a senior citizen";
+    }
+
+    document.getElementById("age877").innerHTML = message;
+}
