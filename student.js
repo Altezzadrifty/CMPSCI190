@@ -88,3 +88,29 @@ function getAge877() {
 
     document.getElementById("age877").innerHTML = message;
 }
+
+function getBreaks661() {
+    var userInput;
+    var breaksString = '';
+    do {
+      userInput = parseInt(prompt('Enter a number from 1 to 5:'));
+    } while (userInput < 1 || userInput > 5);
+    for (var i = 0; i < userInput; i++) {
+      breaksString += "<br>";
+    }
+    var breaks661Span = document.getElementById('breaks661');
+    breaks661Span.innerHTML = breaksString;
+  }
+
+  function getCards503() {
+    var userInput;
+    var cardsString = '';
+    do {
+      userInput = parseInt(prompt('Enter a number from 2 to 7:'));
+    } while (userInput < 2 || userInput > 7);
+    for (var i = 0; i < userInput; i++) {
+      cardsString += "Card #" + i + " ";
+    }
+    var cards503Span = document.getElementById('cards503');
+    cards503Span.innerHTML = cardsString;
+  }
