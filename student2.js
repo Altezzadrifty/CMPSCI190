@@ -1,14 +1,18 @@
-function getheader() {
-    var headerHTML = "<header style=' background-color: #F1F1F1; text-align: center; 10 px; '>"
-    + "<h1 style='font-size: 24px;'>" + companyname4 + "</h1>"
-                 + "</header>";
-  return headerHTML;
-}
-function getFooter(companyname4, address3, phoneNumber3) {
-  var footerHTML = "<footer style='background-color: #000000; text-align: center; padding: 10px; font-size: 12px;'>"
-                 + "<p>" + companyname3 + "</p>"
-                 + "<p>" + address3 + "</p>"
-                 + "<p>" + phoneNumber3 + "</p>"
-                 + "</footer>";
-  return footerHTML;
-}
+var companyname4
+var address3
+var phonenumber3
+function getHeader() {
+    var headerHTML = "<header style='background-color: #ff6e4f; text-align: center; padding: 10px;'>"
+                   + "<h1 style='font-size: 24px;'>" + companyname4 + "</h1>"
+                   + "</header>";
+    return headerHTML;
+  }
+  function getFooter(companyname4, address3, phonenumber3) {
+    var footerHTML = "<footer style='background-color: #ff6e4f; text-align: center; padding: 10px; font-size: 12px;'>"
+                   + "<p>" + companyname4 + "</p>"
+                   + "<p>" + address3 + "</p>"
+                   + "<p>" + phonenumber3 + "</p>"
+                   + "</footer>";
+    return footerHTML;
+  }
+  
