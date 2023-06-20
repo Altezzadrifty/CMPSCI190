@@ -7,7 +7,7 @@ function getHeader() {
                    + "</header>";
     return headerHTML;
   }
-  function makeFooter(companyname4, address3, phonenumber3) {
+  function getFooter(companyname4, address3, phonenumber3) {
     var footerHTML = "<footer style='background-color: #ff6e4f; text-align: center; padding: 10px; font-size: 12px;'>"
                    + "<p>" + companyname4 + "</p>"
                    + "<p>" + address3 + "</p>"
