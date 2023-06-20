@@ -14,8 +14,8 @@
 
 <body>
     <div id="head251"></div>
-    <div id="tempMessage">This is a temporary Message</div>
-    <div id="foot319"></div>
+    <div id='menu778'>Menu</div>
+    <div id='main748'>Main Web Page</div>    <div id="foot319"></div>
     <script src="student2.js"></script>
     <script>
       var companyname4 = "Xander's Clothes";
@@ -23,9 +23,24 @@
       var phonenumber3 = "(555) 319-1234";
       var header = getHeader();
       document.getElementById("head251").innerHTML = header;
-      var footer = getFooter(companyname4, address3, phonenumber3);
+      var footer = makeFooter(companyname4, address3, phonenumber3);
       document.getElementById("foot319").innerHTML = footer;
+      
     </script>
+    <script src="yourscript.js"></script>
+    <script>
+      var menuElement = document.getElementById("menu778");
+      var menuHTML = makeMenu6(3); // Example size: 3
+      menuElement.innerHTML = menuHTML;
+    </script>
+
+<script src="yourscript.js"></script>
+<script>
+  var mainElement = document.getElementById("main748");
+  var mainHTML = makeMain7();
+  mainElement.innerHTML = mainHTML;
+</script>
+
 </body>
 </html>
 <!-- Alexander Turnbough, CMP SCI cs190 Lab Web Page #2 Project, Lab Web Page #2  -->

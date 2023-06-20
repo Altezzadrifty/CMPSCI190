@@ -7,12 +7,29 @@ function getHeader() {
                    + "</header>";
     return headerHTML;
   }
-  function getFooter(companyname4, address3, phonenumber3) {
+  function makeFooter(companyname4, address3, phonenumber3) {
     var footerHTML = "<footer style='background-color: #ff6e4f; text-align: center; padding: 10px; font-size: 12px;'>"
                    + "<p>" + companyname4 + "</p>"
                    + "<p>" + address3 + "</p>"
                    + "<p>" + phonenumber3 + "</p>"
+
                    + "</footer>";
     return footerHTML;
+  }
+  function makeMenu6(size) {
+    var menuHTML = "My Menu: ";
+    for (var i = 0; i < size; i++) {
+      menuHTML += "Button ";
+    }
+    return menuHTML;
+  }
+  function makeMain7() {
+    var mainHTML = "My Product:<br>";
+    mainHTML += "Product Name: <br>";
+    mainHTML += "Product ID: <br>";
+    mainHTML += "Product Description: <br>";
+    mainHTML += "Shopping Cart Link Bar <br>";
+    mainHTML += "Product Image: <br>";
+    return mainHTML;
   }
   
