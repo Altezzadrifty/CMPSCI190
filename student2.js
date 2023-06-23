@@ -16,20 +16,34 @@ function getHeader() {
                    + "</footer>";
     return footerHTML;
   }
-  function makeMenu6(size) {
+
+  var product1 = { Name:"Adidas Tracksuit", id:"4000", desc:"Hottest Tracksuit of 2023"};
+  var product2 = { Name:"Nike Sweatpants", id:"5000", desc:"Hottest Sweatpants of 2023"};
+  var product3 = { Name:"Puma T-Shirt", id:"000", desc:"Hottest T-shirt of 2023"};
+
+  function makeMenu6() {
+    var products = [product1, product2, product3]
     var menuHTML = "My Menu: ";
-    for (var i = 0; i < size; i++) {
-      menuHTML += "Button ";
+    for (const product of products) {
+      menuHTML +=  `<button onClick='JavascriptFunction:Exec993(${JSON.stringify(product)})' > ${product.Name} </button>`;
     }
     return menuHTML;
   }
-  function makeMain7() {
-    var mainHTML = "My Product:<br>";
-    mainHTML += "Product Name: <br>";
-    mainHTML += "Product ID: <br>";
-    mainHTML += "Product Description: <br>";
-    mainHTML += "Shopping Cart Link Bar <br>";
-    mainHTML += "Product Image: <br>";
+  function makeMain7(product) {
+    var mainHTML = `My Product:<br/>`;
+    mainHTML += `Product Name: ${product.Name}<br/>`;
+    mainHTML += `Product ID: ${product.id}<br/>`;
+    mainHTML += `Product Description: ${product.desc}<br/>`;
+    // mainHTML += `Shopping Cart Link Bar <br/>`; 
+    // mainHTML += `Product Image: <br/>`;
     return mainHTML;
   }
+
+  function Exec993(product) {
+    console.log(product)
+    document.getElementById("Productdiv").innerHTML=makeMain7(product)
+  }
+
+
+  
   
