@@ -25,7 +25,7 @@ function getHeader() {
     var products = [product1, product2, product3]
     var menuHTML = "My Menu: ";
     for (const product of products) {
-      menuHTML +=  `<button onClick='JavascriptFunction:execButton993(${JSON.stringify(product)})' > ${product.Name} </button>`;
+      menuHTML +=  `<button onClick='JavascriptFunction:execButton933(${JSON.stringify(product)})' > ${product.Name} </button>`;
     }
     return menuHTML;
   }
@@ -39,7 +39,7 @@ function getHeader() {
     return mainHTML;
   }
 
-  function execButton993(product) {
+  function execButton933(product) {
     console.log(product)
     document.getElementById("Productdiv").innerHTML=makeMain7(product)
   }
