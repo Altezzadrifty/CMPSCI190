@@ -1,7 +1,7 @@
 var companyname4 = "Xander's Clothes";
 var address3 = "251 Main St. Valencia, CA 91344";
 var phonenumber3 = "(555) 319-1234";
-var imgurl851 = "./Images/"
+var imgurl851 = "https://class-phi.vercel.app/Images/"
 var cardimgurl741 = "http://www.college1.com/images/cards/gbCard"
 
 function getHeader() {
