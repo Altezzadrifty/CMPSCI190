@@ -3,6 +3,9 @@ var address3 = "251 Main St. Valencia, CA 91344";
 var phonenumber3 = "(555) 319-1234";
 var imgurl851 = "https://class-phi.vercel.app/Images/"
 var cardimgurl741 = "http://www.college1.com/images/cards/gbCard"
+var cardnum593 = -1;
+var cardsInHand = [];
+
 
 function getHeader() {
     var headerHTML = "<header style='background-color: #ff6e4f; text-align: center; padding: 10px;'>"
