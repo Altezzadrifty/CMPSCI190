@@ -31,7 +31,8 @@ function getHeader() {
       menuHTML +=  `<button onClick='JavascriptFunction:execButton933(${JSON.stringify(product)})' > ${product.Name} </button>`;
     }
      menuHTML += `<button onClick='JavascriptFunction:dealCards581()'> Deal Cards </button>`;
-    return menuHTML;
+     menuHTML += `<button onClick='hitCard423()'> Hit Card </button>`;
+     return menuHTML;
 
   }
   function makeMain7(product) {
@@ -58,6 +59,39 @@ function getHeader() {
     htmltoadd +=`<img src="${cardimgurl741}${52}.gif" id="card4" />`
     document.getElementById("Productdiv").innerHTML= htmltoadd
   }
+
+  function hitCard423() {
+    if (cardnum593 === -1 || cardnum593 >= 5) {
+        alert("Cannot hit card at this moment!");
+        return;
+    }
+    var cardToFlip = cardnum593 + 1;
+    document.getElementById(`card${cardToFlip}`).src = `${cardimgurl741}${cardsInHand[cardToFlip]}.gif`;
+    cardnum593++;
+}
+
+function dealCards581() {
+    cardnum593 = -1;
+    cardsInHand = [];
+
+    var htmltoadd = "";
+    for (var i = 0; i < 5; i++) {
+        var cardNumber;
+        do {
+            cardNumber = Math.floor(Math.random() * 52);
+        } while (cardsInHand.includes(cardNumber));
+
+        cardsInHand.push(cardNumber);
+        if (i < 2) {
+            htmltoadd += `<img src="${cardimgurl741}${cardNumber}.gif" id="card${i}" />`;
+            cardnum593++;
+        } else htmltoadd += `<img src="${cardimgurl741}52.gif" id="card${i}" />`;
+        
+    }
+
+    document.getElementById("Productdiv").innerHTML = htmltoadd;
+}
+
 
 
   
