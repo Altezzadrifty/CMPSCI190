@@ -30,11 +30,14 @@ function getHeader() {
   function makeMenu6() {
     var products = [product1, product2, product3]
     var menuHTML = "My Menu: ";
+    menuHTML += makeLinkBar474();
     for (const product of products) {
       menuHTML +=  `<button onClick='JavascriptFunction:execButton933(${JSON.stringify(product)})' > ${product.Name} </button>`;
     }
      menuHTML += `<button onClick='JavascriptFunction:dealCards581()'> Deal Cards </button>`;
      menuHTML += `<button onClick='hitCard423()'> Hit Card </button>`;
+     menuHTML += "<button onclick='popupAd748()'>PopUp Ad</button>";
+     menuHTML += "<button onclick='closeAd748()'>Close Ad</button>";
      return menuHTML;
 
   }
@@ -93,6 +96,58 @@ function dealCards581() {
     }
 
     document.getElementById("Productdiv").innerHTML = htmltoadd;
+}
+
+function makeLinkBar474() {
+    var html = `
+        <form target='paypal' action='https://www.paypal.com/cgi-bin/webscr' method='post'>
+            <input type='hidden' name='business' value='${'xander-co'}'>
+            <input type='hidden' name='cmd' value='_cart'>
+            <input type='hidden' name='add' value='1'>
+            <input type='hidden' name='item_name' value='${'xander-co-nikels'}'>
+            <input type='hidden' name='amount' value='3.95'> <!-- Change this to your product price -->
+            <input type='hidden' name='currency_code' value='USD'>
+            <input type='image' name='submit' src='https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif' alt='Add to Cart'>
+            <img alt='' width='1' height='1' src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif'>
+        </form>
+    `;
+    return html;
+}
+
+
+var ad1 = "<table width=500 height=80 bgcolor='lightgreen'><tr><td><a href='http://www.YOURWEBSITE.com'><h1 align='center'>Check our latest Adidas Tracksuit!</h1></a></td></tr></table>";
+var ad2 = "<table width=500 height=100 bgcolor='lightblue'><tr><td><a href='http://www.YOURWEBSITE.com'><h1 align='center'>Get comfortable with our Nike Sweatpants!</h1></a></td></tr></table>";
+var ad3 = "<table width=500 height=120 bgcolor='lightyellow'><tr><td><a href='http://www.YOURWEBSITE.com'><h1 align='center'>Look cool with Puma T-Shirts!</h1></a></td></tr></table>";
+
+var adnum492 = 1;
+var winobj517 = -1;
+
+function popupAd748() {
+    var ad = null;
+
+    switch (adnum492) {
+        case 1:
+            ad = ad1;
+            break;
+        case 2:
+            ad = ad2;
+            break;
+        case 3:
+            ad = ad3;
+            break;
+    }
+
+    winobj517 = window.open("", "", "width=500,height=200");
+    winobj517.document.write(ad);
+
+    adnum492 = (adnum492 % 3) + 1;
+}
+
+function closeAd748() {
+    if (winobj517 !== -1) {
+        winobj517.close();
+        winobj517 = -1;
+    }
 }
 
 
